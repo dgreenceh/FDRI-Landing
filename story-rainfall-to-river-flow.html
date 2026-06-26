@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From rainfall to river flow — FDRI Data Story</title>
+  <link rel="icon" href="assets/fdri-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/fdri.css">
+  <script>window.FDRI_PAGE = { type: "story", active: "time-series-explorer" };</script>
+</head>
+<body>
+
+  <div class="story">
+
+    <!-- stage: the explorer being demonstrated -->
+    <div class="story__stage">
+      <div class="story__device">
+        <div class="tse-grid">
+
+          <section class="panel" id="smPlotmgr">
+            <div class="panel__head"><span>Plot Management</span></div>
+            <div class="plotcard">
+              <div class="plotcard__head">Plot 1
+                <span class="tools">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-2.7 1.1V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 7 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0-1.1-2.7H1a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 2.6 7"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/></svg>
+                </span>
+              </div>
+              <div class="varrow">
+                <svg class="dot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="20" x2="3" y2="10"/><line x1="9" y1="20" x2="9" y2="4"/><line x1="15" y1="20" x2="15" y2="12"/></svg>
+                <div>Air temperature<div class="meta">Plynlimon AWS · °C</div></div>
+                <span class="pill">left axis</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" id="smDataviz">
+            <div class="panel__head"><span>Data Visualization</span></div>
+            <div class="chart" id="storyChart">
+              <img src="assets/shot-timeseries.svg" alt="Time series chart" style="width:100%;">
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- yellow story sidebar -->
+    <aside class="story__side">
+      <div class="story__side-head"><span class="kicker">Time Series Data Story&nbsp;#1</span></div>
+      <div class="story__hero"><img src="assets/story-rainfall.svg" alt=""></div>
+      <div class="story__subtitle">From rainfall to river flow</div>
+
+      <div class="story__nav">
+        <button id="storyPrev" disabled>&larr; Previous</button>
+        <button id="storyNext">Next &rarr;</button>
+      </div>
+
+      <div class="story__steps" id="storySteps">
+        <div class="story-step is-active" data-spot="">
+          <button class="story-step__btn"><span class="n">1</span>Introduction</button>
+          <div class="story-step__body">When it rains, our network of precipitation sensors detects and measures the rainfall up to once every thirty seconds. This story follows that water from the sky to the river, using the Time Series Data Explorer to see how a catchment responds to a storm.</div>
+        </div>
+        <div class="story-step" data-spot="smDataviz">
+          <button class="story-step__btn"><span class="n">2</span>The Data Visualiser</button>
+          <div class="story-step__body">The Data Visualisation panel is where plots appear. Each chart can carry several variables, with separate left and right axes so measurements in different units can be read together.</div>
+        </div>
+        <div class="story-step" data-spot="smPlotmgr">
+          <button class="story-step__btn"><span class="n">3</span>The Plot Manager</button>
+          <div class="story-step__body">Plot Management lists every plot and the variables within it. From here you add data, reorder series and control how each one is drawn.</div>
+        </div>
+        <div class="story-step" data-spot="smPlotmgr">
+          <button class="story-step__btn"><span class="n">4</span>Adding data</button>
+          <div class="story-step__body">We start with air temperature at the Plynlimon automatic weather station. Search for the station, pick the variable, and it's drawn on the chart.</div>
+        </div>
+        <div class="story-step" data-spot="smPlotmgr">
+          <button class="story-step__btn"><span class="n">5</span>Reviewing the metadata</button>
+          <div class="story-step__body">Before trusting a series, open its record to check the station, units, sampling interval and any quality flags — so you know what the numbers represent.</div>
+        </div>
+        <div class="story-step" data-spot="smDataviz">
+          <button class="story-step__btn"><span class="n">6</span>Adding more data</button>
+          <div class="story-step__body">Now add rainfall and river level to the same plot. With each series on an appropriate axis, the relationships between them become visible.</div>
+        </div>
+        <div class="story-step" data-spot="smDataviz">
+          <button class="story-step__btn"><span class="n">7</span>Navigating the data</button>
+          <div class="story-step__body">Zoom into a single storm to watch rainfall rise and fall, then pan along the record to compare events across the season.</div>
+        </div>
+        <div class="story-step" data-spot="smDataviz">
+          <button class="story-step__btn"><span class="n">8</span>Analysing the data</button>
+          <div class="story-step__body">The lag between peak rainfall and peak river level is the catchment's response time. Reading the two series together is how that story is told.</div>
+        </div>
+        <div class="story-step" data-spot="">
+          <button class="story-step__btn"><span class="n">9</span>Summary</button>
+          <div class="story-step__body">From a single rain gauge to the river's response, the Explorer lets you follow water through the catchment. Try the same steps with your own stations and dates.</div>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <script src="js/components.js"></script>
+  <script src="js/data-story.js"></script>
+</body>
+</html>

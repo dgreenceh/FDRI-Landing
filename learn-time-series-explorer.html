@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn about the Time Series Data Explorer — FDRI</title>
+  <link rel="icon" href="assets/fdri-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/fdri.css">
+  <script>window.FDRI_PAGE = { type: "learn", active: "time-series-explorer" };</script>
+</head>
+<body>
+  <main class="learn">
+    <div class="container" style="padding-top:24px;padding-bottom:40px;">
+      <div class="learn__grid panel" style="overflow:hidden;">
+
+        <div class="learn__main">
+          <h1 style="margin:0 0 16px;color:var(--teal-dark);font-size:22px;">Learn about the Time Series Data Explorer</h1>
+
+          <div class="learn__intro">
+            <p>The <b>Time Series Data Explorer</b> lets you visualise and compare environmental
+              measurements from across the FDRI catchments — from live, high-resolution readings at
+              our monitoring sites to historic research records and citizen-science data.</p>
+            <p>Build your own plots by combining variables from different stations and networks,
+              including real-time <b>FDRI</b> and <b>COSMOS-UK</b> data alongside <b>Environment Agency</b>
+              and <b>SEPA</b> rainfall, river level and flow.</p>
+            <p>Zoom from individual minute-by-minute rainfall events out to years of record, and overlay
+              datasets to see the relationships between them. To learn more about how the Explorer can be
+              used to generate insights, load one of the <a href="#stories"><b>FDRI Data Stories</b></a>.</p>
+          </div>
+
+          <div class="shot">
+            <img src="assets/shot-timeseries.svg" alt="Annotated screenshot of the Time Series Data Explorer">
+            <button class="marker" data-n="1" style="left:6%;  top:14%;"  aria-label="Note 1">1</button>
+            <button class="marker" data-n="2" style="left:6%;  top:38%;"  aria-label="Note 2">2</button>
+            <button class="marker" data-n="3" style="left:64%; top:10%;"  aria-label="Note 3">3</button>
+            <button class="marker" data-n="4" style="left:40%; top:55%;"  aria-label="Note 4">4</button>
+            <button class="marker" data-n="5" style="left:90%; top:78%;"  aria-label="Note 5">5</button>
+            <button class="marker" data-n="6" style="left:90%; top:8%;"   aria-label="Note 6">6</button>
+          </div>
+
+          <div class="notes">
+            <div class="note" data-n="1"><span class="note__num">1</span><span class="note__txt"><b>Add a plot.</b> Use <b>Add Plot</b> in Plot Management to create a new chart. Each plot can hold several variables on shared or dual axes.</span></div>
+            <div class="note" data-n="2"><span class="note__num">2</span><span class="note__txt"><b>Add variables.</b> Search for a station and choose the measurements to display. Mix networks — FDRI, COSMOS-UK, EA and SEPA — in a single plot.</span></div>
+            <div class="note" data-n="3"><span class="note__num">3</span><span class="note__txt"><b>Read the chart.</b> Hover any series to inspect values; the left and right axes carry different units so unlike variables can be compared.</span></div>
+            <div class="note" data-n="4"><span class="note__num">4</span><span class="note__txt"><b>Compare series.</b> Overlay rainfall against river level or flow to see how the catchment responds to each event.</span></div>
+            <div class="note" data-n="5"><span class="note__num">5</span><span class="note__txt"><b>Set the date range.</b> Pick a window from minutes to years; the chart and axes rescale to match.</span></div>
+            <div class="note" data-n="6"><span class="note__num">6</span><span class="note__txt"><b>Export.</b> Download the current view as an image, or reset the axes to return to the full range.</span></div>
+          </div>
+        </div>
+
+        <aside class="stories" id="stories">
+          <h2>FDRI Data Stories</h2>
+          <p>FDRI Data Stories are step-by-step demonstrations of the infrastructure, drawn from real
+            case studies of hydrology and data science in action. They're a good way to see how the
+            tools work in practice — and a good place to start if you're new to the platform.</p>
+          <p>Choose a Time Series Data Explorer story below to get started.</p>
+          <a class="stories__link" href="story-rainfall-to-river-flow.html">&raquo;&nbsp; #1 From rainfall to river flow</a>
+          <a class="stories__link" href="#">&raquo;&nbsp; #2 Title goes here</a>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="js/components.js"></script>
+  <script src="js/learn.js"></script>
+</body>
+</html>

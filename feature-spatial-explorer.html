@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spatial Explorer — FDRI Digital Platform</title>
+  <link rel="icon" href="assets/fdri-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/3.6.2/maplibre-gl.css">
+  <link rel="stylesheet" href="css/fdri.css">
+  <script>window.FDRI_PAGE = {
+    type: "feature", active: "spatial-explorer",
+    learnHref: "learn-spatial-explorer.html", learnLabel: "Spatial Explorer"
+  };</script>
+</head>
+<body>
+
+  <div class="spatial-explorer">
+    <aside class="layers-panel">
+      <div class="layers-panel__head">
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px;"><polygon points="12 2 22 8.5 12 15 2 8.5"/><polyline points="2 15.5 12 22 22 15.5"/></svg>Selected Layers</span>
+        <button class="btn">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Add Layers
+        </button>
+      </div>
+      <div class="layers-panel__body" id="layersBody">No layers selected</div>
+    </aside>
+    <div class="map-full" id="spatialMap" aria-label="Interactive map of FDRI monitoring sites"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/3.6.2/maplibre-gl.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/spatial.js"></script>
+</body>
+</html>

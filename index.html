@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FDRI Digital Platform</title>
+  <meta name="description" content="Access and analyse whole-system hydrological data from across the UK.">
+  <link rel="icon" href="assets/fdri-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/fdri.css">
+  <script>window.FDRI_PAGE = { type: "landing", active: "home" };</script>
+</head>
+<body>
+
+  <!-- header is injected by components.js -->
+
+  <!-- closable intro panel -->
+  <section class="intro" aria-label="Platform introduction">
+    <div class="container intro__inner">
+      <div class="intro__body">
+        <h1>Access and analyse whole-system hydrological data from across the UK</h1>
+        <p>This platform provides a range of <b>tools</b> and <b>resources</b> to support access to
+          UK-wide hydrological datasets and analysis across a range of data types, including time
+          series, geospatial, gridded data, and LiDAR.</p>
+        <p>Key features include: a <b>Searchable Catalogue</b> with filtering tools to help you find
+          and understand diverse datasets, an interactive <b>Time Series Data Explorer</b> with tools
+          to help you explore historical and near real-time data, a <b>Spatial Explorer</b> with
+          multi-layer data visualisation tools. Notebooks to support visualisation of <b>Gridded</b>
+          and <b>LiDAR</b> data, with links to the relevant <b>GitHub</b> repositories.</p>
+      </div>
+      <button class="intro__close" id="introClose" aria-label="Close introduction">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- collapsed state: "Data Platform" tab (click to reopen intro) -->
+  <div class="platform-tab">
+    <div class="container platform-tab__inner">
+      <button id="platformTab" type="button" style="all:unset;cursor:pointer;">
+        <span>Data Platform</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- six feature cards -->
+  <main class="cards-section">
+    <div class="container">
+      <div class="cards">
+
+        <a class="card" href="feature-catalogue-search.html">
+          <div class="card__media">
+            <img class="card__illus" src="assets/illus-catalogue.svg" alt="">
+            <p class="card__desc">A searchable catalogue of FDRI datasets — filter by metadata or location to find exactly the data you need.</p>
+          </div>
+          <div class="card__label">Catalogue Search</div>
+        </a>
+
+        <a class="card" href="feature-time-series-explorer.html">
+          <div class="card__media">
+            <img class="card__illus" src="assets/illus-time-series.svg" alt="">
+            <p class="card__desc">Plot and compare environmental measurements over time, from live sensor readings to historic records.</p>
+          </div>
+          <div class="card__label">Time Series Data Explorer</div>
+        </a>
+
+        <a class="card" href="feature-spatial-explorer.html">
+          <div class="card__media">
+            <img class="card__illus" src="assets/illus-spatial.svg" alt="">
+            <p class="card__desc">Map where environmental monitoring happens — turn data layers on and off across the FDRI catchments.</p>
+          </div>
+          <div class="card__label">Spatial Explorer</div>
+        </a>
+
+        <a class="card" href="feature-gridded-data.html">
+          <div class="card__media">
+            <img class="card__illus" src="assets/illus-gridded.svg" alt="">
+            <p class="card__desc">Notebooks for visualising gridded datasets, with links to the relevant GitHub repositories.</p>
+          </div>
+          <div class="card__label">Gridded Data Service</div>
+        </a>
+
+        <a class="card" href="feature-lidar-data.html">
+          <div class="card__media">
+            <img class="card__illus" src="assets/illus-lidar.svg" alt="">
+            <p class="card__desc">Notebooks for visualising LiDAR datasets, with links to the relevant GitHub repositories.</p>
+          </div>
+          <div class="card__label">LiDAR Data Service</div>
+        </a>
+
+        <a class="card" href="feature-github-repos.html">
+          <div class="card__media">
+            <img class="card__illus" src="assets/illus-github.svg" alt="">
+            <p class="card__desc">Browse the FDRI code repositories behind the platform's tools and notebooks.</p>
+          </div>
+          <div class="card__label">GitHub Repos</div>
+        </a>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="js/components.js"></script>
+</body>
+</html>

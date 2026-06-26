@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LiDAR Data Service — FDRI Digital Platform</title>
+  <link rel="icon" href="assets/fdri-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/fdri.css">
+  <script>window.FDRI_PAGE = {
+    type: "feature", active: "lidar-data",
+    learnHref: "learn-lidar-data.html", learnLabel: "LiDAR Data Service"
+  };</script>
+</head>
+<body>
+  <main class="page"><div class="container page__inner">
+    <div class="page-head">
+      <h1>LiDAR Data Service</h1>
+      <p class="page-lead">Notebooks for visualising FDRI LiDAR datasets, with links to the relevant GitHub repositories. Explore point clouds and derived surface models, or clone a repository to run the analysis yourself.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:22px;">
+      <article class="result"><h3><a href="#">Catchment digital terrain models</a></h3><p>High-resolution DTMs derived from FDRI LiDAR surveys. Notebook: hillshade rendering and cross-section profiles.</p></article>
+      <article class="result"><h3><a href="#">Riparian canopy height</a></h3><p>Canopy height models along instrumented river reaches. Notebook: overlay with channel networks.</p></article>
+      <article class="result"><h3><a href="#">Floodplain micro-topography</a></h3><p>Fine-scale elevation surfaces for floodplain analysis. Notebook: detect channels and depressions.</p></article>
+    </div>
+
+    <p style="margin-top:26px;"><a href="feature-github-repos.html">Browse the related GitHub repositories →</a></p>
+  </div></main>
+
+  <script src="js/components.js"></script>
+</body>
+</html>

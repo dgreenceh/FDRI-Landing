@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catalogue Search — FDRI Digital Platform</title>
+  <link rel="icon" href="assets/fdri-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/3.6.2/maplibre-gl.css">
+  <link rel="stylesheet" href="css/fdri.css">
+  <script>window.FDRI_PAGE = {
+    type: "feature", active: "catalogue-search",
+    learnHref: "learn-catalogue-search.html", learnLabel: "Catalogue Search"
+  };</script>
+</head>
+<body>
+  <main class="page"><div class="container page__inner">
+
+    <!-- search bar -->
+    <div class="searchbar">
+      <div class="searchbar__field">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke-linecap="round"/></svg>
+        <input type="search" aria-label="Search the catalogue" placeholder="Search datasets, models and monitoring facilities…">
+      </div>
+      <button class="btn-search">Search</button>
+      <button class="toggle-pill" id="filtersToggle" aria-pressed="true">Filters <span class="sw" aria-hidden="true"></span></button>
+    </div>
+
+    <!-- Filter / Spatial tabs -->
+    <div class="tabs" role="tablist" aria-label="Search mode">
+      <button role="tab" id="tab-filter"  aria-selected="true"  aria-controls="panel-filter">Filter</button>
+      <button role="tab" id="tab-spatial" aria-selected="false" aria-controls="panel-spatial">Spatial</button>
+    </div>
+
+    <!-- FILTER PANEL -->
+    <div class="tabpanel" id="panel-filter" role="tabpanel" aria-labelledby="tab-filter">
+      <div class="filters">
+
+        <!-- Catalogue (active + used) -->
+        <div class="filtercol">
+          <div class="filtercol__head">
+            <span class="col-toggle" aria-pressed="true"><span class="sw" aria-hidden="true"></span>Catalogue</span>
+            <button class="x" aria-label="Remove Catalogue filter">×</button>
+          </div>
+          <div class="filtercol__search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke-linecap="round"/></svg>
+            <input type="search" aria-label="Search Catalogue options" placeholder="Search">
+          </div>
+          <div class="filtercol__opts">
+            <label class="opt"><input type="checkbox" checked> FDRI</label>
+            <label class="opt"><input type="checkbox"> EIDC</label>
+            <label class="opt"><input type="checkbox"> UKCEH</label>
+          </div>
+        </div>
+
+        <!-- Type -->
+        <div class="filtercol">
+          <div class="filtercol__head">
+            <span class="col-toggle" aria-pressed="false"><span class="sw" aria-hidden="true"></span>Type</span>
+            <button class="x" aria-label="Remove Type filter">×</button>
+          </div>
+          <div class="filtercol__search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke-linecap="round"/></svg>
+            <input type="search" aria-label="Search Type options" placeholder="Search">
+          </div>
+          <div class="filtercol__opts">
+            <label class="opt"><input type="checkbox"> Aggregation</label>
+            <label class="opt"><input type="checkbox"> Application</label>
+            <label class="opt"><input type="checkbox"> Dataset</label>
+            <label class="opt"><input type="checkbox"> Datatype</label>
+            <label class="opt"><input type="checkbox"> Model</label>
+            <label class="opt"><input type="checkbox"> Monitoring Facility</label>
+          </div>
+        </div>
+
+        <!-- Topic (active + used) -->
+        <div class="filtercol">
+          <div class="filtercol__head">
+            <span class="col-toggle" aria-pressed="true"><span class="sw" aria-hidden="true"></span>Topic</span>
+            <button class="x" aria-label="Remove Topic filter">×</button>
+          </div>
+          <div class="filtercol__search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke-linecap="round"/></svg>
+            <input type="search" aria-label="Search Topic options" placeholder="Search">
+          </div>
+          <div class="filtercol__opts">
+            <label class="opt"><input type="checkbox"> Aggregation</label>
+            <label class="opt"><input type="checkbox" checked> Animal behaviour</label>
+            <label class="opt"><input type="checkbox"> Biodiversity</label>
+            <label class="opt"><input type="checkbox" checked> Climate</label>
+            <label class="opt"><input type="checkbox"> Ecosystem services</label>
+            <label class="opt"><input type="checkbox"> Environment</label>
+          </div>
+        </div>
+
+        <!-- License -->
+        <div class="filtercol">
+          <div class="filtercol__head">
+            <span class="col-toggle" aria-pressed="false"><span class="sw" aria-hidden="true"></span>License</span>
+            <button class="x" aria-label="Remove License filter">×</button>
+          </div>
+          <div class="filtercol__search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke-linecap="round"/></svg>
+            <input type="search" aria-label="Search License options" placeholder="Search">
+          </div>
+          <div class="filtercol__opts">
+            <label class="opt"><input type="checkbox"> Non-open government license</label>
+            <label class="opt"><input type="checkbox"> Open government license</label>
+          </div>
+        </div>
+
+        <!-- Record Type -->
+        <div class="filtercol">
+          <div class="filtercol__head">
+            <span class="col-toggle" aria-pressed="false"><span class="sw" aria-hidden="true"></span>Record Type</span>
+            <button class="x" aria-label="Remove Record Type filter">×</button>
+          </div>
+          <div class="filtercol__search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke-linecap="round"/></svg>
+            <input type="search" aria-label="Search Record Type options" placeholder="Search">
+          </div>
+          <div class="filtercol__opts">
+            <label class="opt"><input type="checkbox"> Application</label>
+            <label class="opt"><input type="checkbox"> Data Collection</label>
+            <label class="opt"><input type="checkbox"> Dataset</label>
+            <label class="opt"><input type="checkbox"> Datatype</label>
+            <label class="opt"><input type="checkbox"> Model</label>
+            <label class="opt"><input type="checkbox"> Monitoring Facility</label>
+          </div>
+        </div>
+
+        <!-- add filter -->
+        <button class="addfilter" id="addFilter" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- SPATIAL PANEL -->
+    <div class="tabpanel" id="panel-spatial" role="tabpanel" aria-labelledby="tab-spatial" hidden>
+      <div class="spatial">
+        <div class="spatial__controls">
+          <div class="latlng">
+            <label for="nlat">North Latitude</label><input id="nlat" value="52.1234">
+            <label for="slat">South Latitude</label><input id="slat" value="51.1234">
+            <label for="elng">East Longitude</label><input id="elng" value="-1.1234">
+            <label for="wlng">West Longitude</label><input id="wlng" value="-1.2345">
+          </div>
+          <button class="clear-all">Clear all
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+          </button>
+          <p style="font-size:12px;color:var(--muted);margin-top:14px;">Enter lat/long values or draw a box on the map to filter by area.</p>
+        </div>
+        <div class="map" id="catalogueMap" aria-label="Interactive map for spatial filtering"></div>
+      </div>
+    </div>
+
+    <!-- results -->
+    <div class="results-head">
+      <span class="results-count">Showing 20 of 381 records</span>
+      <span class="sort">Sort by: relevance
+        <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+      </span>
+    </div>
+
+    <article class="result">
+      <h3><a href="#">Sub-daily meteorology and river flow observations from a long-term upland catchment experiment in Plynlimon, Wales, 1968–2010</a></h3>
+      <p>This dataset contains hourly automatic weather station (AWS) and 15-minute river flow gauging station data from sites in the Plynlimon (Pumlumon) area of upland mid-Wales, representing the headwaters of the Rivers Severn (Hafren) and Wye (Gwy). A range of instrumentation across 6 AWS sites and 10 gauging stations delivered meteorological and river flow data from 1968 to 2010 to explore changing hydrometeorology as part of the long-term Plynlimon catchment monitoring study. The dataset includes: air temperature, temperature depression, Vapour Pressure Deficit (VPD), precipitation, solar radiation, net radiation…</p>
+    </article>
+
+    <article class="result">
+      <h3><a href="#">COSMOS-UK soil moisture, meteorological and flux data, 2013–present</a></h3>
+      <p>Near real-time and historic measurements from the COSMOS-UK network of monitoring sites, including cosmic-ray neutron soil moisture, precipitation, air temperature, humidity and surface energy fluxes across a representative range of UK land covers.</p>
+    </article>
+
+    <article class="result">
+      <h3><a href="#">FDRI catchment river level and flow, 15-minute resolution</a></h3>
+      <p>Continuous river level and derived flow records from FDRI instrumented catchments, quality-controlled and updated in near real-time, suitable for event analysis and long-term trend assessment.</p>
+    </article>
+
+  </div></main>
+
+  <!-- filters popup -->
+  <div class="modal-backdrop" id="filtersModal" role="dialog" aria-modal="true" aria-labelledby="filtersModalTitle">
+    <div class="modal">
+      <div class="modal__head">
+        <h2 id="filtersModalTitle">Filters</h2>
+        <button class="modal__close" id="filtersModalClose" aria-label="Close">×</button>
+      </div>
+      <div class="chips" id="filterChips"></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/3.6.2/maplibre-gl.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/catalogue.js"></script>
+</body>
+</html>

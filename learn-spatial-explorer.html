@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn about the Spatial Explorer — FDRI</title>
+  <link rel="icon" href="assets/fdri-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/fdri.css">
+  <script>window.FDRI_PAGE = { type: "learn", active: "spatial-explorer" };</script>
+</head>
+<body>
+  <main class="learn">
+    <div class="container" style="padding-top:24px;padding-bottom:40px;">
+      <div class="learn__grid panel" style="overflow:hidden;">
+
+        <div class="learn__main">
+          <h1 style="margin:0 0 16px;color:var(--teal-dark);font-size:22px;">Learn about the Spatial Explorer</h1>
+
+          <div class="learn__intro">
+            <p>The <b>Spatial Explorer</b> lets you discover where environmental monitoring takes place
+              across the FDRI catchments — bringing together FDRI's own sites alongside previous research,
+              regulatory, water-company and citizen-science monitoring on a single interactive map.</p>
+            <p>Turn layers on and off to build the picture you need, zoom from a whole catchment down to an
+              individual station, and click any site to see what it measures and who runs it.</p>
+            <p>It's the quickest way to understand what data exists, and where, before you dive into the
+              time series itself. To learn more, load one of the <a href="#stories"><b>FDRI Data Stories</b></a> below.</p>
+          </div>
+
+          <div class="shot">
+            <img src="assets/shot-spatial.svg" alt="Annotated screenshot of the Spatial Explorer">
+            <button class="marker" data-n="1" style="left:9%;  top:8%;"  aria-label="Note 1">1</button>
+            <button class="marker" data-n="2" style="left:47%; top:32%;" aria-label="Note 2">2</button>
+            <button class="marker" data-n="3" style="left:66%; top:39%;" aria-label="Note 3">3</button>
+            <button class="marker" data-n="4" style="left:9%;  top:50%;" aria-label="Note 4">4</button>
+            <button class="marker" data-n="5" style="left:62%; top:65%;" aria-label="Note 5">5</button>
+          </div>
+
+          <div class="notes">
+            <div class="note" data-n="1"><span class="note__num">1</span><span class="note__txt"><b>Selected Layers.</b> The panel lists the data layers currently on the map. Use <b>Add Layers</b> to bring in monitoring networks and boundaries.</span></div>
+            <div class="note" data-n="2"><span class="note__num">2</span><span class="note__txt"><b>Monitoring sites.</b> Each marker is a station. Colour and shape indicate the network it belongs to.</span></div>
+            <div class="note" data-n="3"><span class="note__num">3</span><span class="note__txt"><b>Site details.</b> Click a marker to see what it measures, who operates it, and a link to its records in the catalogue.</span></div>
+            <div class="note" data-n="4"><span class="note__num">4</span><span class="note__txt"><b>Catchment context.</b> Boundary layers show the extent of each catchment so you can read sites in context.</span></div>
+            <div class="note" data-n="5"><span class="note__num">5</span><span class="note__txt"><b>Zoom &amp; pan.</b> Move from a whole catchment down to a single reach; the basemap and labels rescale as you go.</span></div>
+          </div>
+        </div>
+
+        <aside class="stories" id="stories">
+          <h2>FDRI Data Stories</h2>
+          <p>FDRI Data Stories are step-by-step demonstrations of the infrastructure, drawn from real
+            case studies of hydrology and data science in action. They're a good way to see how the
+            tools work in practice — and a good place to start if you're new to the platform.</p>
+          <p>Choose a story below to get started.</p>
+          <a class="stories__link" href="story-rainfall-to-river-flow.html">&raquo;&nbsp; #1 From rainfall to river flow</a>
+          <a class="stories__link" href="#">&raquo;&nbsp; #2 Title goes here</a>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="js/components.js"></script>
+  <script src="js/learn.js"></script>
+</body>
+</html>

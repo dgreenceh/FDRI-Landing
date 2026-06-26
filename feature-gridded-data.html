@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gridded Data Service — FDRI Digital Platform</title>
+  <link rel="icon" href="assets/fdri-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/fdri.css">
+  <script>window.FDRI_PAGE = {
+    type: "feature", active: "gridded-data",
+    learnHref: "learn-gridded-data.html", learnLabel: "Gridded Data Service"
+  };</script>
+</head>
+<body>
+  <main class="page"><div class="container page__inner">
+    <div class="page-head">
+      <h1>Gridded Data Service</h1>
+      <p class="page-lead">Notebooks for visualising FDRI gridded datasets, with links to the relevant GitHub repositories. Open a notebook to explore the data interactively, or clone the repository to run it in your own environment.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:22px;">
+      <article class="result"><h3><a href="#">Gridded rainfall — CEH-GEAR</a></h3><p>1&nbsp;km gridded estimates of daily and monthly rainfall for the UK. Notebook: visualise time slices and animate accumulation.</p></article>
+      <article class="result"><h3><a href="#">Gridded potential evapotranspiration — CHESS-PE</a></h3><p>Daily 1&nbsp;km potential evapotranspiration across Great Britain. Notebook: map seasonal means and anomalies.</p></article>
+      <article class="result"><h3><a href="#">Soil moisture deficit grids</a></h3><p>Modelled soil moisture deficit surfaces for FDRI catchments. Notebook: compare against catchment boundaries.</p></article>
+    </div>
+
+    <p style="margin-top:26px;"><a href="feature-github-repos.html">Browse the related GitHub repositories →</a></p>
+  </div></main>
+
+  <script src="js/components.js"></script>
+</body>
+</html>

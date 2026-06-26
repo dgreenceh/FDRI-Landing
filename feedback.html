@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Share feedback — FDRI Digital Platform</title>
+  <link rel="icon" href="assets/fdri-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/fdri.css">
+  <script>window.FDRI_PAGE = { type: "simple", active: "" };</script>
+</head>
+<body>
+  <main class="feedback-page">
+    <div class="container">
+      <div class="feedback-wrap">
+        <h1 style="text-align:center;color:var(--teal-dark);margin:0 0 14px;">Share your feedback</h1>
+        <p class="feedback-intro">The FDRI Digital Platform is in active development, and your input helps shape
+          what we build next. A few quick questions below — none are required, so tell us as much or as little
+          as you like.</p>
+
+        <div class="field">
+          <label for="fbName">Name</label>
+          <input id="fbName" type="text" autocomplete="name" placeholder="Your name (optional)">
+        </div>
+        <div class="field">
+          <label for="fbEmail">Email</label>
+          <input id="fbEmail" type="email" autocomplete="email" placeholder="you@example.com (optional)">
+        </div>
+
+        <div class="qblock">
+          <p><b>What were you trying to do on the platform today?</b></p>
+          <textarea aria-label="What were you trying to do on the platform today?"></textarea>
+        </div>
+        <div class="qblock">
+          <p><b>Was there anything you couldn't find, or couldn't do?</b></p>
+          <textarea aria-label="Was there anything you couldn't find, or couldn't do?"></textarea>
+        </div>
+        <div class="qblock">
+          <p><b>How could we make the platform more useful for your work?</b></p>
+          <textarea aria-label="How could we make the platform more useful for your work?"></textarea>
+        </div>
+
+        <div class="feedback-submit">
+          <button class="btn-primary" type="button">Send feedback</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/components.js"></script>
+</body>
+</html>
