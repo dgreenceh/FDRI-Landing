@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" role="img" aria-label="Spatial Explorer screenshot (placeholder)">
+ <rect width="900" height="460" fill="#e7eef2"/>
+ <rect x="0" y="0" width="210" height="460" fill="#ffffff" stroke="#dfe2e5"/>
+ <rect x="0" y="0" width="210" height="34" fill="#f6f7f8"/>
+ <text x="16" y="22" font-family="system-ui,Arial" font-size="12" fill="#3a3f44">Selected Layers</text>
+ <text x="105" y="240" text-anchor="middle" font-family="system-ui,Arial" font-size="11" fill="#9aa1a7">No layers selected</text>
+ <g fill="#cfd9df" opacity="0.7">
+  <path d="M360 70 q60 -20 120 10 t140 -5 q40 60 10 130 t-90 120 q-90 30 -160 -20 t-60 -150 q20 -80 40 -115z"/>
+ </g>
+ <g fill="#1f6f96"><circle cx="430" cy="150" r="8"/><circle cx="520" cy="200" r="8"/><circle cx="470" cy="270" r="8"/><circle cx="600" cy="180" r="8"/><circle cx="560" cy="300" r="8"/></g>
+ <text x="555" y="448" text-anchor="middle" font-family="system-ui,Arial" font-size="10" fill="#6b7177" letter-spacing="1.5">SCREENSHOT — REPLACE</text>
+</svg>

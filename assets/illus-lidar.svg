@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img" aria-label=" illustration (placeholder)">
+  <rect width="360" height="220" fill="#eceef0"/>
+  <path d="M120 120 l60 -34 l60 34 l-60 34 z" fill="#6b5a4a"/><path d="M120 120 l0 36 l60 34 l0 -36 z" fill="#4f4338"/><path d="M240 120 l0 36 l-60 34 l0 -36 z" fill="#5d4f41"/><polyline fill="none" stroke="#2f9fd0" stroke-width="6" points="150,138 178,150 205,134"/>
+  <text x="180" y="208" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-size="10" fill="#9aa1a7" letter-spacing="1.5">ILLUSTRATION — REPLACE</text>
+</svg>
